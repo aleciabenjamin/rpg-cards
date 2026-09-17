@@ -37,17 +37,40 @@ function CharacterCard(props) {
 
 // 2. HUVUDSIDAN
 export default function App() {
-	const hero1 = {
-		name: "Alecia",
-		role: "Oracle",
-		hp: 212,
-		level: 17,
-	};
+	const guild = [
+		{
+			name: "Nova",
+			role: "Mage",
+			hp: 80,
+			level: 5,
+		},
+		{
+			name: "Kael",
+			role: "Warrior",
+			hp: 140,
+			level: 12,
+		},
+		{
+			name: "Lyra",
+			role: "Rogue",
+			hp: 0,
+			level: 4,
+		},
+		{
+			name: "Theron",
+			role: "Paladin",
+			hp: 110,
+			level: 3,
+		},
+	];
 
 	return (
 		<main>
 			<h1>RPG Guild Dashboard</h1>
-			<CharacterCard character={hero1} />
+			<CharacterCard character={guild[0]} />
+			<CharacterCard character={guild[1]} />
+			<CharacterCard character={guild[2]} />
+			<CharacterCard character={guild[3]} />
 		</main>
 	);
 }
